@@ -252,22 +252,6 @@ int main()
 			default:
 				break;
 			}
-
-			// shop.mItemMap = shop.itemMap.find(selectItem);
-			// if (shop.mItemMap != shop.itemMap.end())
-			// {
-			//      cout << shop.mItemMap->first << " 를 선택하셨습니다." << endl;
-			//	
-			//	    if (shop.mItemMap->second > inventory.myGold)
-			//      {
-			//	    	cout << "소지금이 모자랍니다." << endl;
-			//	    }
-			//	    else
-			//      {
-			//	    	cout << "구매가 완료되었습니다." << endl;
-			//	    }
-			// }
-
 			break;
 
 		case 3:
@@ -282,19 +266,17 @@ int main()
 
 			cout << "파실 아이템이 있으시면 골라주세요. (없으면 0을 입력)" << endl;
 			cin >> sellItem;
-
-			if (sellItem == 0)
-			{
-				cout << "인벤토리를 빠져 나갑니다." << endl;
-			}
-			else
-			{
-				cout << "아직 미구현 입니다..." << endl;
-			}
-
-			break;
-		default:
-			break;
+				if (sellItem == 0)
+				{
+					cout << "인벤토리를 빠져 나갑니다." << endl;
+				}
+				else
+				{
+					cout << "아직 미구현 입니다..." << endl;
+				}
+				break;
+			default:
+				break;	
 		}
 
 		i = 1;
