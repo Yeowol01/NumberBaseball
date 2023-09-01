@@ -176,7 +176,7 @@ int main()
 		{
 			cout << "인벤토리로 이동합니다." << endl;
 		}
-		else if(selectWay == 4)
+		else if (selectWay == 4)
 		{
 			cout << "게임을 종료합니다." << endl;
 		}
@@ -266,18 +266,66 @@ int main()
 
 			cout << "파실 아이템이 있으시면 골라주세요. (없으면 0을 입력)" << endl;
 			cin >> sellItem;
+			if (sellItem == 0)
+			{
+				cout << "인벤토리를 빠져 나갑니다." << endl;
+			}
+			else
+			{
+				cout << "아직 미구현 입니다..." << endl;
+			}
+			break;
+		default:
+			break;
+
+			/*/
+			switch (sellItem)
+			{
+			case 1:
+				inventory.mItemMap = inventory.itemMap.find("힌트 돋보기");
 				if (sellItem == 0)
 				{
 					cout << "인벤토리를 빠져 나갑니다." << endl;
 				}
 				else
 				{
-					cout << "아직 미구현 입니다..." << endl;
+					cout << inventory.mItemMap->first << " 이/가 판매 되었습니다." << endl;
+					shop.itemMap.insert(pair<const char*, int>("힌트 돋보기", 1500));
+					inventory.myGold += shop.mItemMap->second;
+				}
+				break;
+			case 2:
+				inventory.mItemMap = inventory.itemMap.find("힌트 돋보기2");
+				if (sellItem == 0)
+				{
+					cout << "인벤토리를 빠져 나갑니다." << endl;
+				}
+				else
+				{
+					cout << inventory.mItemMap->first << " 이/가 판매 되었습니다." << endl;
+					shop.itemMap.insert(pair<const char*, int>("힌트 돋보기2", 1500));
+					inventory.myGold += shop.mItemMap->second;
+				}
+				break;
+			case 3:
+				inventory.mItemMap = inventory.itemMap.find("힌트 돋보기3");
+				if (sellItem == 0)
+				{
+					cout << "인벤토리를 빠져 나갑니다." << endl;
+				}
+				else
+				{
+					cout << inventory.mItemMap->first << " 이/가 판매 되었습니다." << endl;
+					shop.itemMap.insert(pair<const char*, int>("힌트 돋보기3", 1500));
+					inventory.myGold += shop.mItemMap->second;
 				}
 				break;
 			default:
-				break;	
+				break;
+			}
+			/*/			
 		}
+
 
 		i = 1;
 
